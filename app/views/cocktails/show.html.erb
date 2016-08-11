@@ -1,0 +1,11 @@
+<h1> Cocktails list</h1>
+<h2><%= @cocktail.name %></h2>
+
+<p>
+  <%= link_to 'edit', edit_cocktail_path(@cocktail)%>
+  <%= link_to 'remove', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?'} %>
+</p>
+
+<div>   <%= link_to 'new', new_cocktail_path%> </div>
+
+ <p> <%= link_to 'return to index', cocktails_path %> </p>

@@ -3,16 +3,16 @@
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li>
-      <%= link_to cocktail.name, cocktails_path%>
-
-      <%= link_to 'edit', edit_cocktail_path(@cocktail)%>
-      <%= link_to 'remove', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure to delete?'} %>
+      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+      <p></p>
+      <%= link_to 'edit', edit_cocktail_path(cocktail)%>
+      <%= link_to 'remove', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure to delete?'} %>
     </li>
   <% end %>
 </ul>
 
 <ul>
   <li>
-      <%= link_to 'new cocktail', new_cocktail_path %>
+      <%= link_to 'add_new cocktail', new_cocktail_path %>
   </li>
 </ul>>

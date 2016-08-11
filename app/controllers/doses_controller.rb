@@ -1,6 +1,6 @@
 class DosesController < ApplicationController
   before_action :set_dose, only: [:show, :edit, :update, :destroy]
-  before_action :set_cocktail, only: [:new, :create]
+  before_action :set_cocktail, only: [:new, :create, :destroy]
 
   def index
     @doses = Dose.all

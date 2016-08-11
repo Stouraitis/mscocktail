@@ -1,25 +1,9 @@
-<h3>Assign a new cocktail</h3>
+<h4>Create a new cocktail</h4>
 
-<!-- <form action="/cocktails" method="post">
+<%= link_to 'cancel', cocktails_path, data: { confirm: 'You want to cancel?'} %>
 
-  /* enter cocktail name */
-  <label for="name">Name: </label>
-  <input type="text" name="cocktail[name]" id="name">
-
-  /* enter dose amount */
-  <label for="description">Dose: </label>
-  <input type="text" name="dose[description]" id="description">
-  /* enter ingredient*/
-  <label for="name">Ingredient: </label>
-  <input type="text" name="ingredient[name]" id="name">
-
-  <div> <%= link_to 'new', new_cocktail_path%> </div>
-
-
-  <input type="submit">
-</form>
- -->
 <%= simple_form_for @cocktail do |f| %>
 <%= f.input :name %>
 <%= f.submit %>
 <% end %>
+

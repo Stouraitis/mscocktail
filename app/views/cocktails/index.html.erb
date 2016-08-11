@@ -1,18 +1,16 @@
-<h3>These are all the cocktails</h3>
+<h3>Cocktails list</h3>
+<div>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li>
+        <h4> <%= link_to cocktail.name, cocktail_path(cocktail)%></h4>
+        <%= link_to 'edit', edit_cocktail_path(cocktail)%>
+        <%= link_to 'remove', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure to delete?'}%>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail)%>
-      <p></p>
-      <%= link_to 'edit', edit_cocktail_path(cocktail)%>
-      <%= link_to 'remove', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure to delete?'} %>
-    </li>
-  <% end %>
-</ul>
-
-<ul>
-  <li>
-      <%= link_to 'add_new cocktail', new_cocktail_path %>
-  </li>
-</ul>>
+<div>
+    <%= link_to 'add cocktail', new_cocktail_path %>
+</div>

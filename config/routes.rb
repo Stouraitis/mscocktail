@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
 
   root 'cocktails#index'
+  mount Attachinary::Engine => "/attachinary"
 end

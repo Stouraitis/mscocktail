@@ -1,11 +1,13 @@
-<h3>Edit an existing cocktail</h3>
-<h3>--<%= @cocktail.name %>--</h3>
+<div class= "editcocktail">
+  <h3>Edit an existing cocktail</h3>
+  <h3>--<%= @cocktail.name %>--</h3>
 
-<p>
-  <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-  <% end %>
-</p>
+  <p>
+    <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+</div>
+    <%= f.submit %>
+    <% end %>
+  </p>
 
- <p> <%= link_to 'return to index', cocktails_path %> </p>
+   <p> <%= link_to 'return to index', cocktails_path %> </p>

@@ -1,20 +1,21 @@
-<h3><%= @cocktail.name %></h3>
-<%  @cocktail.doses.each do |dose| %>
-<p>
-<%= dose.description %>  <%= dose.ingredient.name %>
-<%= link_to 'remove',cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?'} %>
-</p>
-<% end %>
-
-
-<p>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, as: :select, collection: @ingredients %>
-  <%= f.submit value:"hello", class: "btn btn-primary" %>
+<div class= "recipe">
+  <h3><%= @cocktail.name %></h3>
+  <%  @cocktail.doses.each do |dose| %>
+  <p>
+  <%= dose.description %>  <%= dose.ingredient.name %>
+  <%= link_to 'remove',cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?'} %>
+  </p>
   <% end %>
-</p>
 
+
+  <p>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :ingredient_id, as: :select, collection: @ingredients %>
+    <%= f.submit value:"hello", class: "btn btn-primary" %>
+    <% end %>
+  </p>
+</div>
 
 <p>
   <%= link_to 'edit', edit_cocktail_path(@cocktail)%>

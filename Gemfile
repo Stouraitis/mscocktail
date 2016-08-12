@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'cloudinary', '1.1.0'
 gem 'figaro'
 ruby '2.3.1'
 gem 'bootstrap-sass'

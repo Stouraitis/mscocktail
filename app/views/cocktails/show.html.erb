@@ -11,7 +11,7 @@
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.input :ingredient_id, as: :select, collection: @ingredients %>
-  <%= f.submit %>
+  <%= f.submit value:"hello", class: "btn btn-primary" %>
   <% end %>
 </p>
 
